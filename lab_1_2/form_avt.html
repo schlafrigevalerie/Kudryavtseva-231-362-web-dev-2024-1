@@ -1,0 +1,117 @@
+<!doctype html>
+<link rel="stylesheet" href="first.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap"
+  rel="stylesheet"
+/>
+<html>
+  <header>
+    <div class="name">
+      <a href="first.html">
+        <img src="что.jpg" width="70px" height="70px" />
+      </a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">вход для читателей</a></li>
+        <li><a href="">электронная библиотека</a></li>
+        <li><a href="feedback_form.html">дайте обратную связь!!!</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <body>
+    <h1><span style="color: white"> Авторизация </span></h1>
+
+    <p class="aligncenter">
+      <img class="chan" src="uh.jpg" style="border-radius: 30px" />
+    </p>
+
+    <h2><span style="color: white">Форма обратной связи</span></h2>
+
+    <form
+      action="#"
+      method="post"
+      style="border-radius: 30px; text-align: center"
+    >
+      <div>
+        <label for="name">ФИО:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div>
+        <label>Откуда узнали о нас?</label>
+        <div>
+          <input
+            type="radio"
+            id="source-search"
+            name="source"
+            value="поиск"
+            checked
+          />
+          <label for="source-search">Поисковая система</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="source-friend"
+            name="source"
+            value="рекомендации"
+          />
+          <label for="source-friend">Рекомендации друзей</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="source-social"
+            name="source"
+            value="соцсети"
+          />
+          <label for="source-social">Социальные сети</label>
+        </div>
+      </div>
+
+      <div>
+        <label for="type">Тип обращения:</label>
+        <select id="type" name="type">
+          <option value="жалоба">Жалоба</option>
+          <option value="предложение">Предложение</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Текст сообщения:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <div>
+        <label for="attachment">Вложение:</label>
+        <input type="file" id="attachment" name="attachment" />
+      </div>
+
+      <div>
+        <input type="checkbox" id="agreement" name="agreement" required />
+        <label for="agreement"
+          >Даю согласие на обработку персональных данных</label
+        >
+      </div>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <!--<p>становитесь нашими добрыми читателями, дорогие девочки</p>-->
+  </body>
+
+  <footer>
+    <p>
+      здесь будет телефончик и контакты там разные почта телега почтовый индекс
+    </p>
+  </footer>
+</html>

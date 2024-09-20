@@ -1,0 +1,147 @@
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+}
+
+.nap {
+  text-align: center;
+  font-family: "Handjet";
+}
+
+.menu ul {
+  font-family: "Handjet";
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.menu a,
+.menu .active {
+  display: block;
+  padding: 8px 10px;
+}
+
+.menu a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(stars.gif);
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+footer {
+  font-family: "Handjet";
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}
+
+table {
+  font-family: "Handjet";
+  text-align: center;
+  margin: 0 auto;
+  width: 650px;
+  border-top: 7px solid #bed7dc;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border: 3px solid #bed7dc;
+}
+th {
+  text-align: center;
+  padding: 10px;
+  border: 3px solid #bed7dc;
+}
+
+form {
+  background-color: #ffffff;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h1 {
+  font-family: "Handjet";
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: "Handjet";
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.white-text {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: #ab696d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #905559;
+}
