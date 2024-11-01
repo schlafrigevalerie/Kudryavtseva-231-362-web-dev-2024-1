@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кудрявцева Валерия Александровна - Лабораторная работа 9</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <header>
+    <div class="name">
+        <a href="first.html">
+            <img src="что.jpg" width="70px" height="100px" />
+        </a>
+    </div>
+    <div class="menu">
+        <ul>
+            <h1>Кудрявцева Валерия</h1>
+            <h2>Группа: 231-362</h2>
+        <h3>Лабораторная работа 9</h3>
+        </ul>
+    </div>
+
+    </header>
+    <main>
+        <?php
+        $start_value = -10; // начальное значение аргумента
+        $encounting = 10000; // количество вычисляемых значений
+        $step = 2; // шаг изменения аргумента
+        $min_value = 10; // минимальное значение, останавливающее вычисления
+        $max_value = 20; // максимальное значение, останавливающее вычисления
+        $type = 'A'; // тип верстки
+
+        $x = $start_value; // текущее значение аргумента
+        $results = []; // массив для хранения результатов
+
+        // Начало вывода в зависимости от типа верстки
+        if ($type == 'B') {
+            echo '<ul>';
+        } elseif ($type == 'C') {
+            echo '<ol>';
+        } elseif ($type == 'D') {
+            echo '<table border="1" style="border-collapse: collapse;">';
+            echo '<tr><th>№</th><th>x</th><th>f(x)</th></tr>';
+        } elseif ($type == 'E') {
+            // Для блочной верстки
+        }
+
+        // Цикл для вычисления значений функции
+        for ($i = 0; $i < $encounting; $i++, $x += $step) {
+            if ($x <= 10) {
+                $f = round(32 * $x / 21, 3); // вычисляем функцию
+            } elseif ($x < 20) {
+                if ($x == 4) {
+                    $f = 'error'; // деление на ноль
+                } else {
+                    $f = round($x * $x / 3 + 7 / ($x - 4), 3); // вычисляем функцию
+                }
+            } else {
+                if ($x == 22) {
+                    $f = 'error'; // деление на ноль
+                } else {
+                    $f = round((1 / ($x - 22)) * 2 + $x, 3); // вычисляем функцию
+                }
+            }
+
+            // Проверка на выход за пределы
+            if ($f >= $max_value || $f < $min_value) {
+                break; // заканчиваем цикл
+            }
+
+            // Сохранение результата
+            $results[] = ['x' => $x, 'f' => $f];
+
+            // Вывод в зависимости от типа верстки
+            if ($type == 'A') {
+                echo "f($x) = $f<br>";
+            } elseif ($type == 'B') {
+                echo "<li>f($x) = $f</li>";
+            } elseif ($type == 'C') {
+                echo "<li>f($x) = $f</li>";
+            } elseif ($type == 'D') {
+                echo "<tr><td>" . ($i + 1) . "</td><td>$x</td><td>$f</td></tr>";
+            } elseif ($type == 'E') {
+                echo "<div style='border: 2px solid red; margin: 8px; display: inline-block;'>f($x) = $f</div>";
+            }
+        }
+
+        // Закрытие тегов
+        if ($type == 'B') {
+            echo '</ul>';
+        } elseif ($type == 'C') {
+            echo '</ol>';
+        } elseif ($type == 'D') {
+            echo '</table>';
+        }
+
+        // Вычисление статистики
+        $values = array_column($results, 'f');
+        $sum = array_sum($values);
+        $average = count($values) > 0 ? round($sum / count($values), 3) : 0;
+        $min = min($values);
+        $max = max($values);
+
+        echo "<footer>";
+        echo "<p>Тип верстки: $type</p>";
+        echo "<p>Сумма: $sum</p>";
+        echo "<p>Среднее: $average</p>";
+        echo "<p>Мини
+        echo "<p>Минимальное значение: $min</p>";
+        echo "<p>Максимальное значение: $max</p>";
+        echo "</footer>";
+        ?>
+    </main>
+</body>
+</html>
+
